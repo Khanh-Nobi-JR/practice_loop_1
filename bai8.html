@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>ba8</title>
+</head>
+<body>
+<input type="button" onclick="choose()" value="choose number">
+<script>
+    function choose(){
+        let firstNum = +prompt("nhập số bắt đầu trong dãy");
+        let secondNum = +prompt("nhập số bkết thúc trong dãy");
+        let num = null;
+        num = Math.floor(Math.random()* (secondNum - firstNum +1)+ firstNum);
+        let selectNum = +prompt("nhập số bạn chọn từ" + firstNum + "-" + secondNum);
+        for (let count = 0; count < 6; count++) {
+            if (count == 3){
+                alert("Bạn nhập nhiều quá rồi");
+                confirm("thử lại game mới nhé");
+                break;
+            } else if (selectNum == num){
+                alert("chúc mừng bạn đã đoán đúng");
+                break;
+            } else if (selectNum > num){
+                alert("số bạn đoạn hình như hơi lớn");
+            } else if(selectNum < num ){
+                alert("số bạn đoán hình như hơi bé");
+            } selectNum = +prompt("nhập số bạn chọn từ" + firstNum + "-" + secondNum);
+        } alert("Đáp án là " + num);
+
+    }
+</script>
+</body>
+</html>

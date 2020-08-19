@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>bai3</title>
+</head>
+<body>
+<input type="text" id="fibonaci">
+<input type="button" onclick="check()" value="check">
+<p id="result"></p>
+<p>số đầu tiên chia hết cho 5 là <span id="first"></span></p>
+<p>tổng của dãy trên là: <span id="sum"></span></p>
+<script>
+    function check(){
+        let num = document.getElementById("fibonaci").value;
+        let f1 = 1, f2 = 0;
+        let count = 0;
+        let sum = document.getElementById('sum');
+        for ( i = 0; i < num; i++) {
+            document.getElementById("result").innerHTML += f2 + " ";
+            sum.innerHTML = +sum.innerHTML + f2 ;
+            f = f1 + f2;
+            f1 = f2
+            f2 = f ;
+
+            if (f % 5 == 0 && count ==0 && f2 != 0){
+                document.getElementById('first').innerHTML = f2;
+                count++;
+            }
+
+        }
+
+    }
+
+</script>
+</body>
+</html>

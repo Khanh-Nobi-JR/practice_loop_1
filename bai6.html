@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>bai6</title>
+</head>
+<body>
+<input type="text"id="num">
+<input type="button" onclick="check()" value="check">
+<p>tổng là <span id="result"></span></p>
+<script>
+    function check(){
+        let num = document.getElementById('num').value;
+        let count = 0;
+        let value = 1;
+        while (count <= num){
+            if (checkSeven(value)){
+                document.getElementById('result').innerHTML += value + "";
+                sum = document
+                count++;
+
+            } value++;
+
+        }
+    }
+    function checkSeven(N){
+        if(N < 7){
+            return false;
+        } else {
+            for (let i = 7; i < N - 1 ; i++) {
+                if (N % 7 == 0){
+                    return true;
+                }
+            }
+        }
+    }
+</script>
+</body>
+</html>
